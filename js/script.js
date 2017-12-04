@@ -9,7 +9,7 @@ var squares = document.querySelectorAll(".square"),
     messageDisplay = document.querySelector("#message"),
     h1 = document.querySelector("h1"),
     resetButton = document.getElementById("reset"),
-    modeButtons = document.getElementsByClassName("mode");
+    modeButtons = document.getElementsByClassName("mode")
 
 for(var i = 0; i < modeButtons.length; i++){
     modeButtons[i].addEventListener("click", function(){
