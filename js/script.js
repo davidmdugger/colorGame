@@ -5,7 +5,7 @@ var colors = generateRandomColors(numSquares);
 
 var squares = document.querySelectorAll(".square"),
     pickedColor = pickColor(),
-    colorDisplay = document.getElementById("colorDisplay"),
+    colorDisplay = document.getElementById("colorDisplay"), // target the span tag where we want the color to be displayed
     messageDisplay = document.querySelector("#message"),
     h1 = document.querySelector("h1"),
     resetButton = document.getElementById("reset"),
@@ -18,6 +18,13 @@ for(var i = 0; i < modeButtons.length; i++){
         this.classList.add("selected"); 
         
         this.textContent === "Easy" ? numSquares = 3 : numSquares = 6; // if tC = "Easy" then set numSquares to 3 else (:) set numSquares to 6
+        
+//        if(this.textContet === "Easy"){
+//            numSquares = 3;
+//        } else{
+//            numSquares = 6;
+//        }
+//        reset();
     });
 }
 
@@ -36,6 +43,35 @@ function reset(){
     }
     h1.style.backgroundColor = "steelblue";
 }
+
+//easyBtn.addEventListener("click", function(){
+//    easyBtn.classList.add("selected"); 
+//    hardBtn.classList.remove("selected");
+//    numSquares = 3;
+//    colors = generateRandomColors(numSquares);
+//    pickedColor = pickColor();
+//    colorDisplay.textContent = pickedColor;
+//    for(var i = 0; i < squares.length; i++){
+//        if(colors[i]){
+//            squares[i].style.backgroundColor = colors[i];
+//        } else{
+//            squares[i].style.display = "none";
+//        }
+//    } 
+//});
+//
+//hardBtn.addEventListener("click", function(){
+//   easyBtn.classList.remove("selected"); 
+//   hardBtn.classList.add("selected");
+//    numSquares = 6;
+//    colors = generateRandomColors(numSquares);
+//    pickedColor = pickColor();
+//    colorDisplay.textContent = pickedColor;
+//    for(var i = 0; i < squares.length; i++){
+//        squares[i].style.backgroundColor = colors[i];
+//        squares[i].style.display = "block";
+//    } 
+//});
 
 resetButton.addEventListener("click", function(){
     // generate new colors -- already exists above; Copypasta
